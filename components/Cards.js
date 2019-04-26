@@ -20,7 +20,7 @@ class Cards extends React.Component {
         }
     }
     render() {
-        console.log("were here" + JSON.stringify(this.props.user.aboutMe));
+      //  console.log("were here" + JSON.stringify(this.props.user.aboutMe));
         return (
             <TouchableOpacity onPress={() => this.nextPhoto()}>
                 <ImageBackground style={styles.card} source={{uri: this.props.images[this.state.num]}}>

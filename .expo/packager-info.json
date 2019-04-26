@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 1875,
-  "expoServerNgrokUrl": "https://2q-yvm.anonymous.husky.exp.direct",
-  "packagerNgrokUrl": "https://packager.2q-yvm.anonymous.husky.exp.direct",
-  "ngrokPid": 1891,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }

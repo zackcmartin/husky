@@ -14,6 +14,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-aws3": "0.0.8",
     "react-native-gifted-chat": "^0.7.2",
+    "react-native-modal-picker": "0.0.16",
+    "react-native-modal-selector": "^1.0.3",
     "react-native-swipe-cards": "^0.1.1",
     "react-navigation": "^3.3.2",
     "react-redux": "^6.0.1",

@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from '../screens/Home';
-import Profile from '../screens/Profile';
+import ProfileTabNavigator from './ProfileTabNavigator';
 import Matches from '../screens/Matches';
 import { createBottomTabNavigator } from 'react-navigation';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
@@ -13,8 +13,8 @@ import { Image } from 'react-native';
 
 export default createBottomTabNavigator(
   {
-    Profile: {
-      screen: Profile,
+    Account: {
+      screen: ProfileTabNavigator,
       navigationOptions: {
         tabBarIcon: ({focused}) => (
           <MaterialCommunityIcons color ={'#1b90cb'} name={focused ? 'account' : 'account-outline'} size={38}/> 
@@ -39,9 +39,9 @@ export default createBottomTabNavigator(
   }
 },
 {
-    navigationOptions: {
-      header: null
-    },
+  navigationOptions: {
+    header: null,
+  },
     tabBarPosition: 'bottom',
     initialRouteName: 'Home',
     animationEnabled: true,

@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../styles';
-import RootNavigator from '../navigation/RootNavigator'
 import { connect } from 'react-redux';
 import { login } from '../redux/actions';
 import * as firebase from 'firebase';
 import firebaseConfig from '../config/firebase.js'; 
+import Root from '../navigation/RootNavigator.js'
 
 firebase.initializeApp(firebaseConfig);
 
@@ -20,15 +20,16 @@ import {
 class Login extends React.Component {
     state = {} 
 
-    componentWillMount() {
-        /*
-         firebase.auth().onAuthStateChanged((user) => {
-             if (user != null) {
-                 this.props.dispatch(login(user))
-             }
-         })
-         */
-    }
+    // componentWillMount() {
+        
+    //      firebase.auth().onAuthStateChanged((user) => {
+    //          if (user != null) {
+    //              this.props.dispatch(login(user))
+    //          }
+    //      })
+         
+    // }
+    
 
     login = async () =>  {
         try {
@@ -45,6 +46,7 @@ class Login extends React.Component {
               //Build Firebase credential with the Facebook access token.
                const credential = await firebase.auth.FacebookAuthProvider.credential(token);
 
+
                //Sign in with credential from the Facebook user.
                firebase.auth().signInAndRetrieveDataWithCredential(credential).catch((error) => {
                    //Handle Errors here.
@@ -52,6 +54,7 @@ class Login extends React.Component {
                })
 
                firebase.auth().onAuthStateChanged((user) => {
+                console.log("HERE " + JSON.stringify(user))
                 if (user != null) {
                     this.props.dispatch(login(user))
                 }
@@ -69,7 +72,7 @@ class Login extends React.Component {
     render() {
         if(this.props.loggedIn){
             return (
-                <Text>Hello</Text>
+                <Root />
             )
         }
         else{
@@ -78,9 +81,6 @@ class Login extends React.Component {
                     <Image style={styles.imgLogin} source={require('../assets/huskyLogo.png')}/>
                     <TouchableOpacity onPress={this.login.bind(this)}>
                         <Text style={styles.button}>Facebook Login</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate("Signup")}>
-                        <Text style={styles.button}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
             )

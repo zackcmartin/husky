@@ -19,6 +19,9 @@ var styles = StyleSheet.create({
         justifyContent: 'center',
         textAlign: 'center'
     },
+    textLeft: {
+        textAlign: 'left'
+    },
     img: {
         width: 90,
         height: 90,
@@ -46,10 +49,22 @@ var styles = StyleSheet.create({
         backgroundColor: '#fff',
         height: 100
     },
+    textInput2: {
+        width: 330,
+        backgroundColor: '#fff',
+        height: 50  
+    },
     bold: {
         padding: 10,
         fontSize: 18,
         fontWeight: 'bold'
+    },
+    bold2: {
+        fontSize: 25,
+        paddingTop: 10,
+        paddingRight: 5,
+        fontWeight: 'bold',
+        color: '#1b90cb',
     },
     button: {
         borderRadius: 15,
@@ -79,6 +94,21 @@ var styles = StyleSheet.create({
     logo: {
         width: 50,
         height: 25,
+    },
+    inputContainer: {
+        borderLeftWidth: 4,
+        borderRightWidth: 4,
+        height: 70,
+        borderColor: "#FFFFFF"
+      },
+    marginLeft: {
+        marginLeft: 20
+    },
+    marginTop: {
+        marginTop: 15
+    },
+    marginTop2: {
+        marginTop: 30
     }
 })
 
